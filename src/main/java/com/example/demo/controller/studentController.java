@@ -10,5 +10,8 @@ public class studentController
 
     @GetMapping("/getAllStudent")
     public List<studentEntity> getAll()
+    {
+        ret
+    }
 
 }
