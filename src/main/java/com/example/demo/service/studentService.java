@@ -7,5 +7,5 @@ interface studentService
 {
     List<studentEntity> getAll();
 
-    studentEntity
+    studentEntity addStudent(studentEntity,student);
 }
