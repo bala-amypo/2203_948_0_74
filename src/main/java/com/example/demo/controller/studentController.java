@@ -4,6 +4,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class studentController
 {
-    @autowired
-    
+    @Autowired
+    studentService service;
+
+    @GetMapping("/get")
+
 }
