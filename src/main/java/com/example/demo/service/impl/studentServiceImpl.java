@@ -3,6 +3,7 @@ package com.example.demo.service.impl;
 import com.example.demo.entity.studentEntity;
 import com.example.demo.service.studentService;
 import com.example.demo.repository.studentRepo;
+import com.example.demo.exception.StudentNotFoundException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,14 +30,14 @@ public class studentServiceImpl implements studentService
 
     public studentEntity getbyId(Long id)
     {
-      return repo.findById(id).orElseThrow(() -> new StudentNotFoundException(errMsg:"Student ID not Found"));
+      return repo.findById(id).orElseThrow(() -> new StudentNotFoundException("Student ID not Found"));
     }
 
     public studentEntity updateById(Long id,studentEntity newstu)
     {
         studentEntity existing = getbyId(id);
         newstu.setId(existing.getId());
-        repo.save(newstu);
+        return repo.save(newstu);
     }
 
     public String deleteByID(Long id)
