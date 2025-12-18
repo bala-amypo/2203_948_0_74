@@ -13,6 +13,6 @@ public interface studentService
     
     studentEntity updateById(Long id,studentEntity newstu);
 
-    studentEntity deleteByID(Long id);
+    String studentEntity deleteByID(Long id);
 
 }
