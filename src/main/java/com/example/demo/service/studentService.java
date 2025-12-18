@@ -1,7 +1,7 @@
 package com.example.demo.service;
 
 import com.example.demo.entity.studentEntity;
-import java.util.*;
+import java.util.List;
 
 interface studentService
 {
