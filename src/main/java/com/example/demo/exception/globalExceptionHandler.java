@@ -11,13 +11,13 @@ import java.util.Map;
 @RestControllerAdvice
 public class globalExceptionHandler
 {
-    @exceptionHandler(MethodArgumentNotValidException.class)
+    @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<Map<String,String>> handleValidationErrors
     (MethodArgumentNotValidException ex)
     {
-        Map<String,String> error = new hashMap<>();
+        Map<String,String> error = new HashMap<>();
 
-        ex.getBindingResult().getFieldsErrors().forEach(err -> 
+        ex.getBindingResult().getFieldErrors().forEach(err -> 
         error.put(err.getField(),err.getDefaultMessage())
         );
 
