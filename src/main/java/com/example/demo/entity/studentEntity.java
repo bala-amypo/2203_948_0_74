@@ -38,15 +38,12 @@ public class studentEntity
     
     public void setEmail(String email) {
     this.email = email;
-}
-
-public studentEntity()
-{
-
-}
-
-public studentEntity(Long id,String name,String email)
-{
+    }
+    public studentEntity()
+    {
+    }
+    public studentEntity(Long id,String name,String email)
+    {
     this.id = id;
     this.name = name;this.email = email;
     }
