@@ -1,9 +1,11 @@
 package com.example.demo.controller;
 
-import org.springframework.web.bind.annotation.RestController;
-import jakarta.validation.valid;
-import com.example.demo.entity.*;
-import com.example.demo.service.*;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.validation.Valid;
+import com.example.demo.entity.studentEntity;
+import com.example.demo.service.studentService;
+import java.util.List;
 
 @RestController
 public class studentController
