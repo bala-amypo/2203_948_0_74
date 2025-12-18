@@ -8,6 +8,7 @@ import com.example.demo.service.studentService;
 import java.util.List;
 
 @RestController
+@RequestMapping("/student")
 public class studentController
 {
     @Autowired
