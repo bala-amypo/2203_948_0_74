@@ -8,18 +8,20 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@service
+@Service
 
 public class studentServiceImpl implements studentService
 {
     @Autowired
-    studentRepo repo;
+    private studentRepo repo
 
-    List<studentEntity> getAll()
+    @Override
+    public List<studentEntity> getAll()
     {
         return repo.findAll();
     }
 
+    @Override
     public studentEntity addStudent(studentEntity student)
     {
         return repo.save(student);
