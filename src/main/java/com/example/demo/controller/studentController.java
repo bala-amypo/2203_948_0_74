@@ -12,9 +12,9 @@ import java.util.List;
 public class studentController
 {
     @Autowired
-    studentService service;
+    private studentService service;
 
-    @GetMapping("/getAllStudent")
+    @GetMapping("/getAll")
     public List<studentEntity> getAll()
     {
         return service.getAll();

@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 public class studentServiceImpl implements studentService
 {
     @Autowired
-    private studentRepo repo
+    private studentRepo repo;
 
     @Override
     public List<studentEntity> getAll()
